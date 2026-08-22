@@ -13,62 +13,96 @@ body {
 
     background-color: #eadcf7;
 
-    color: #111;
+    color: #000000;
 }
 
 
 /* =========================
-   HEADER
+   NAVIGATION BAR
 ========================= */
 
-header {
+.navbar {
+    height: 145px;
+
     background: linear-gradient(
         to bottom,
         #a960e8,
         #8528df
     );
 
-    min-height: 130px;
-
-    padding: 25px 40px;
-
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    padding: 0 40px;
+
+    gap: 55px;
 }
 
 
-/* Logo */
+/* CreativeAI logo */
 
-header h1 {
-    margin: 0;
+.logo {
+    font-size: 58px;
 
-    font-size: 50px;
+    font-weight: bold;
+
+    padding-right: 40px;
+
+    border-right: 8px solid rgba(255, 255, 255, 0.25);
+
+    white-space: nowrap;
 }
 
 
-/* Navigation */
+/* Navigation links */
 
 nav {
     display: flex;
 
-    gap: 40px;
+    gap: 45px;
+
+    flex: 1;
 }
 
 nav a {
-    color: #111;
+    color: #000000;
 
-    text-decoration: none;
-
-    font-size: 25px;
+    font-size: 40px;
 
     font-weight: bold;
+
+    text-decoration: none;
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+
+/* Log in button */
+
+.login-button {
+    border: none;
+
+    background-color: #c38bf0;
+
+    border-radius: 30px;
+
+    padding: 15px 70px;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 0 0 10px rgba(255, 255, 255, 0.12);
+}
+
+.login-button:hover {
+    background-color: #d09df5;
 }
 
 
@@ -77,15 +111,15 @@ nav a:hover {
 ========================= */
 
 main {
-    width: min(1200px, 94%);
+    width: min(1340px, 94%);
 
     margin: 0 auto;
 
-    background-color: white;
+    background-color: #ffffff;
 
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 145px);
 
-    padding: 60px 40px;
+    padding: 75px 35px;
 }
 
 
@@ -97,38 +131,51 @@ main {
     text-align: center;
 }
 
+
+/* Date */
+
 .date {
     margin: 0 0 15px;
 
-    font-size: 24px;
-}
-
-.hero h2 {
-    margin: 0 0 30px;
-
-    font-size: 60px;
+    font-size: 30px;
 }
 
 
-/* Try TG */
+/* Main title */
 
-button {
-    background-color: #bd82ec;
+.hero h1 {
+    margin: 0 0 35px;
 
+    font-size: 68px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   TRY TG BUTTON
+========================= */
+
+.try-button {
     border: none;
 
-    border-radius: 18px;
+    background-color: #bd82ec;
 
-    padding: 12px 45px;
+    border-radius: 22px;
 
-    font-size: 28px;
+    padding: 10px 40px;
+
+    font-size: 40px;
 
     font-weight: bold;
 
     cursor: pointer;
+
+    box-shadow:
+        inset 0 0 0 9px rgba(255, 255, 255, 0.15);
 }
 
-button:hover {
+.try-button:hover {
     transform: scale(1.05);
 
     background-color: #ca94f2;
@@ -136,61 +183,65 @@ button:hover {
 
 
 /* =========================
-   INTRODUCTION POST
+   UPDATE BOX
 ========================= */
 
-.post {
-    margin-top: 40px;
-
-    padding: 35px;
-
-    background-color: #ae72e4;
-
-    font-size: 24px;
-
-    text-align: center;
-}
-
-
-/* =========================
-   UPDATE LOGS
-========================= */
-
-.update-logs {
+.update-box {
     margin-top: 35px;
 
-    padding: 30px 35px;
+    height: 307px;
+
+    padding: 40px 45px;
 
     background-color: #ae72e4;
-}
-
-.update-logs h2 {
-    margin-top: 0;
 
     font-size: 30px;
 }
 
 
-/* Individual log links */
+/* =========================
+   INTRODUCTION TEXT
+========================= */
 
-.logs {
-    display: flex;
+.intro-text {
+    margin: 0;
 
-    flex-direction: column;
+    text-align: center;
 
-    gap: 12px;
+    line-height: 1.15;
 }
 
-.logs a {
-    color: #111;
 
-    text-decoration: none;
+/* =========================
+   UPDATE CONTENT
+========================= */
 
-    font-size: 23px;
+.update-content {
+    margin-top: 20px;
 }
 
-.logs a:hover {
-    text-decoration: underline;
+
+/* Update Notes title */
+
+.update-title {
+    margin: 0;
+
+    font-size: 30px;
+
+    text-align: left;
+}
+
+
+/* Placeholder */
+
+.update-placeholder {
+    margin-top: 2px;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    text-align: left;
 }
 
 
@@ -198,38 +249,78 @@ button:hover {
    MOBILE
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
-    header {
-        flex-direction: column;
+    .navbar {
+        height: auto;
 
-        align-items: flex-start;
+        padding: 20px;
+
+        flex-wrap: wrap;
 
         gap: 20px;
-
-        padding: 25px;
     }
 
-    header h1 {
-        font-size: 40px;
+
+    .logo {
+        width: 100%;
+
+        padding-right: 0;
+
+        border-right: none;
+
+        font-size: 42px;
     }
+
 
     nav {
         gap: 20px;
-
-        flex-wrap: wrap;
     }
+
 
     nav a {
-        font-size: 20px;
+        font-size: 25px;
     }
+
+
+    .login-button {
+        font-size: 22px;
+
+        padding: 10px 30px;
+    }
+
 
     main {
-        padding: 40px 20px;
+        padding: 50px 20px;
     }
 
-    .hero h2 {
-        font-size: 40px;
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+
+    .update-box {
+        height: auto;
+
+        min-height: 307px;
+
+        padding: 30px 25px;
+    }
+
+
+    .intro-text {
+        font-size: 22px;
+    }
+
+
+    .update-title {
+        font-size: 24px;
+    }
+
+
+    .update-placeholder {
+        font-size: 22px;
     }
 
 }
