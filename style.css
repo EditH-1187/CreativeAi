@@ -1,18 +1,36 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-    background: #eadcf7;
+    background-color: #eadcf7;
 
     color: #111;
 }
 
 
-header {
-    background: #8d36df;
+/* =========================
+   HEADER
+========================= */
 
-    padding: 30px;
+header {
+    background: linear-gradient(
+        to bottom,
+        #a960e8,
+        #8528df
+    );
+
+    min-height: 130px;
+
+    padding: 25px 40px;
 
     display: flex;
 
@@ -22,71 +40,196 @@ header {
 }
 
 
+/* Logo */
+
 header h1 {
     margin: 0;
 
-    font-size: 40px;
+    font-size: 50px;
 }
 
+
+/* Navigation */
 
 nav {
     display: flex;
 
-    gap: 30px;
+    gap: 40px;
 }
 
-
 nav a {
-    color: black;
+    color: #111;
 
     text-decoration: none;
 
+    font-size: 25px;
+
     font-weight: bold;
-
-    font-size: 20px;
 }
-
 
 nav a:hover {
     text-decoration: underline;
 }
 
 
+/* =========================
+   MAIN
+========================= */
+
 main {
-    max-width: 1000px;
+    width: min(1200px, 94%);
 
-    margin: 50px auto;
+    margin: 0 auto;
 
-    padding: 50px;
+    background-color: white;
 
-    background: white;
+    min-height: calc(100vh - 130px);
 
+    padding: 60px 40px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
     text-align: center;
 }
 
+.date {
+    margin: 0 0 15px;
 
-main h2 {
-    font-size: 50px;
+    font-size: 24px;
+}
+
+.hero h2 {
+    margin: 0 0 30px;
+
+    font-size: 60px;
 }
 
 
+/* Try TG */
+
 button {
-    background: #bd82ec;
+    background-color: #bd82ec;
 
     border: none;
 
-    border-radius: 15px;
+    border-radius: 18px;
 
-    padding: 15px 35px;
+    padding: 12px 45px;
 
-    font-size: 22px;
+    font-size: 28px;
 
     font-weight: bold;
 
     cursor: pointer;
 }
 
-
 button:hover {
     transform: scale(1.05);
+
+    background-color: #ca94f2;
+}
+
+
+/* =========================
+   INTRODUCTION POST
+========================= */
+
+.post {
+    margin-top: 40px;
+
+    padding: 35px;
+
+    background-color: #ae72e4;
+
+    font-size: 24px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   UPDATE LOGS
+========================= */
+
+.update-logs {
+    margin-top: 35px;
+
+    padding: 30px 35px;
+
+    background-color: #ae72e4;
+}
+
+.update-logs h2 {
+    margin-top: 0;
+
+    font-size: 30px;
+}
+
+
+/* Individual log links */
+
+.logs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.logs a {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 23px;
+}
+
+.logs a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        gap: 20px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
 }
