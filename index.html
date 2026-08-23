@@ -3,41 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-
     <title>CreativeAI</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
-
-    <header>
-
-        <h1>CreativeAI</h1>
-
+    <header class="navbar">
+        <div class="logo">
+            <img
+                src="assets/creativeai-logo.png"
+                alt="CreativeAI">
+        </div>
+        
         <nav>
-            <a href="#">About Us</a>
-            <a href="#">Products</a>
-            <a href="#">Log in</a>
+
+            <a href="#">
+                About Us
+            </a>
+
+            <a href="#">
+                Products
+            </a>
+
         </nav>
+
+
+        <!-- Login -->
+
+        <button class="login-button">
+
+            Log in
+
+        </button>
 
     </header>
 
-
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
-
     <main>
-
-        <!-- TutorialGirl Introduction -->
 
         <section class="hero">
 
@@ -45,56 +49,59 @@
                 08/21/2026
             </p>
 
-            <h2>
+            <h1>
                 Introducing TutorialGirl
-            </h2>
+            </h1>
 
-            <button onclick="tryTG()">
+            <a
+                href="tg.html"
+                class="try-button">
+
                 Try TG
-            </button>
+
+            </a>
 
         </section>
 
+        <section class="update-box">
 
-        <!-- Introduction Post -->
+            <p class="intro-text">
 
-        <section class="post">
-
-            <p>
                 This post introduced TutorialGirl in 2026.
-                TutorialGirl has evolved substantially since then.
+                TutorialGirl has evolved substantially
+                <br>
+                since then.
+
             </p>
 
-        </section>
+            <div class="update-content">
+
+                <p class="update-title">
+
+                    TutorialGirl Update Notes:
+
+                </p>
 
 
-        <!-- =========================
-             UPDATE LOGS
-        ========================== -->
+                <div class="update-placeholder">
 
-        <section class="update-logs">
+                    |
+                    <br>
 
-            <h2>
-                TutorialGirl Update Logs:
-            </h2>
+                    |
+                    <br>
 
-            <div class="logs">
+                    ----&gt;
+                    <a href="#">
+                        insert link
+                    </a>
 
-                <a href="#">
-                    Update 01
-                </a>
-
-                <a href="#">
-                    Update 02
-                </a>
-
-                <a href="#">
-                    Update 03
-                </a>
+                </div>
 
             </div>
 
         </section>
+
 
     </main>
 
