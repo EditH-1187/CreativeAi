@@ -1,235 +1,398 @@
-/* =========================
-   GENERAL
-========================= */
-
 * {
     box-sizing: border-box;
 }
 
+
+html,
 body {
+
     margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100%;
+
+}
+
+
+body {
 
     font-family: Arial, Helvetica, sans-serif;
 
     background-color: #eadcf7;
 
-    color: #111;
+    color: #000000;
+
 }
 
+.navbar {
 
-/* =========================
-   HEADER
-========================= */
+    height: 145px;
 
-header {
     background: linear-gradient(
         to bottom,
         #a960e8,
         #8528df
     );
 
-    min-height: 130px;
+    display: flex;
 
-    padding: 25px 40px;
+    align-items: center;
+
+    padding: 0 40px;
+
+    gap: 55px;
+
+}
+
+.logo {
+
+    height: 100%;
+
+    padding-right: 40px;
+
+    border-right: 8px solid rgba(
+        255,
+        255,
+        255,
+        0.25
+    );
 
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
 }
 
 
-/* Logo */
+.logo img {
 
-header h1 {
-    margin: 0;
+    width: 280px;
 
-    font-size: 50px;
+    height: auto;
+
+    display: block;
+
 }
-
-
-/* Navigation */
 
 nav {
+
     display: flex;
 
-    gap: 40px;
+    gap: 45px;
+
+    flex: 1;
+
 }
 
+
 nav a {
-    color: #111;
+
+    color: #000000;
+
+    font-size: 40px;
+
+    font-weight: bold;
 
     text-decoration: none;
 
-    font-size: 25px;
-
-    font-weight: bold;
 }
+
 
 nav a:hover {
+
     text-decoration: underline;
+
 }
 
 
-/* =========================
-   MAIN
-========================= */
-
-main {
-    width: min(1200px, 94%);
-
-    margin: 0 auto;
-
-    background-color: white;
-
-    min-height: calc(100vh - 130px);
-
-    padding: 60px 40px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    text-align: center;
-}
-
-.date {
-    margin: 0 0 15px;
-
-    font-size: 24px;
-}
-
-.hero h2 {
-    margin: 0 0 30px;
-
-    font-size: 60px;
-}
-
-
-/* Try TG */
-
-button {
-    background-color: #bd82ec;
+.login-button {
 
     border: none;
 
-    border-radius: 18px;
+    background-color: #c38bf0;
 
-    padding: 12px 45px;
+    border-radius: 30px;
 
-    font-size: 28px;
+    padding: 15px 70px;
+
+    font-size: 32px;
 
     font-weight: bold;
 
     cursor: pointer;
+
+    box-shadow:
+        inset 0 0 0 10px
+        rgba(255, 255, 255, 0.12);
+
 }
 
-button:hover {
-    transform: scale(1.05);
 
-    background-color: #ca94f2;
+.login-button:hover {
+
+    background-color: #d09df5;
+
 }
 
+main {
 
-/* =========================
-   INTRODUCTION POST
-========================= */
+    width: min(
+        1340px,
+        94%
+    );
 
-.post {
-    margin-top: 40px;
+    margin: 0 auto;
 
-    padding: 35px;
+    background-color: #ffffff;
 
-    background-color: #ae72e4;
+    min-height: calc(
+        100vh - 145px
+    );
 
-    font-size: 24px;
+    padding: 75px 35px;
+
+}
+
+.hero {
 
     text-align: center;
+
 }
 
 
-/* =========================
-   UPDATE LOGS
-========================= */
+.date {
 
-.update-logs {
-    margin-top: 35px;
-
-    padding: 30px 35px;
-
-    background-color: #ae72e4;
-}
-
-.update-logs h2 {
-    margin-top: 0;
+    margin: 0 0 15px;
 
     font-size: 30px;
+
 }
 
 
-/* Individual log links */
+.hero h1 {
 
-.logs {
-    display: flex;
+    margin: 0 0 35px;
 
-    flex-direction: column;
+    font-size: 68px;
 
-    gap: 12px;
+    font-weight: 800;
+
 }
 
-.logs a {
-    color: #111;
+.try-button {
+
+    display: inline-block;
+
+    border: none;
+
+    background-color: #bd82ec;
+
+    border-radius: 22px;
+
+    padding: 10px 40px;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #000000;
 
     text-decoration: none;
 
-    font-size: 23px;
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 0 0 9px
+        rgba(255, 255, 255, 0.15);
+
 }
 
-.logs a:hover {
+
+.try-button:hover {
+
+    transform: scale(1.05);
+
+    background-color: #ca94f2;
+
+}
+
+.update-box {
+
+    margin-top: 35px;
+
+    height: 307px;
+
+    padding: 40px 45px;
+
+    background-color: #ae72e4;
+
+    font-size: 30px;
+
+}
+
+.intro-text {
+
+    margin: 0;
+
+    text-align: center;
+
+    line-height: 1.15;
+
+}
+
+
+.update-content {
+
+    margin-top: 20px;
+
+}
+
+
+.update-title {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    text-align: left;
+
+}
+
+
+.update-placeholder {
+
+    margin-top: 2px;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+    text-align: left;
+
+}
+
+
+.update-placeholder a {
+
+    color: #000000;
+
+    text-decoration: none;
+
+}
+
+
+.update-placeholder a:hover {
+
     text-decoration: underline;
+
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+@media (max-width: 800px) {
 
-@media (max-width: 700px) {
 
-    header {
-        flex-direction: column;
+    .navbar {
 
-        align-items: flex-start;
+        height: auto;
 
-        gap: 20px;
-
-        padding: 25px;
-    }
-
-    header h1 {
-        font-size: 40px;
-    }
-
-    nav {
-        gap: 20px;
+        padding: 20px;
 
         flex-wrap: wrap;
+
+        gap: 20px;
+
     }
+
+
+    .logo {
+
+        width: 100%;
+
+        height: auto;
+
+        padding-right: 0;
+
+        border-right: none;
+
+    }
+
+
+    .logo img {
+
+        width: 220px;
+
+    }
+
+
+    nav {
+
+        gap: 20px;
+
+    }
+
 
     nav a {
-        font-size: 20px;
+
+        font-size: 25px;
+
     }
+
+
+    .login-button {
+
+        font-size: 22px;
+
+        padding: 10px 30px;
+
+    }
+
 
     main {
-        padding: 40px 20px;
+
+        padding: 50px 20px;
+
     }
 
-    .hero h2 {
-        font-size: 40px;
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .update-box {
+
+        height: auto;
+
+        min-height: 307px;
+
+        padding: 30px 25px;
+
+    }
+
+
+    .intro-text {
+
+        font-size: 22px;
+
+    }
+
+
+    .update-title {
+
+        font-size: 24px;
+
+    }
+
+
+    .update-placeholder {
+
+        font-size: 22px;
+
     }
 
 }
