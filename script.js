@@ -1,5 +1,1 @@
-function tryTG() {
-
-    alert("TutorialGirl is currently unavailable.");
-
-}
+console.log("CreativeAI website loaded.");
