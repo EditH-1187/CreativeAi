@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        TutorialGirl | CreativeAI
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="tg.css">
+
+</head>
+
+
+<body>
+
+    <header class="tg-header">
+
+
+        <div class="tg-logo">
+
+            <img
+                src="assets/creativeai-logo.png"
+                alt="CreativeAI">
+
+        </div>
+
+
+    </header>
+
+    <main class="tg-main">
+
+
+        <div
+            class="tg-stage"
+            id="tgStage">
+
+            <button
+                class="expand-button"
+                id="expandButton"
+                title="Expand"
+                onclick="toggleFullscreen()">
+
+                ⛶
+
+            </button>
+
+
+            <div class="character-area">
+
+
+                <img
+                    src="assets/tutorialgirl.png"
+                    alt="TutorialGirl"
+                    class="tutorialgirl">
+
+
+            </div>
+
+
+            <div class="chat-area">
+
+
+                <div class="chat-background">
+
+
+                    <div class="chat-box">
+
+
+                        <div class="character-name">
+
+                            TutorialGirl
+
+                        </div>
+
+
+                        <div
+                            class="messages"
+                            id="messages">
+
+                            <div class="tg-message">
+
+
+                                <div class="message-avatar">
+                                </div>
+
+
+                                <div class="message">
+
+                                    Sup
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="input-area">
+
+
+                            <input
+                                type="text"
+                                id="userInput"
+                                placeholder="Type a message..."
+                                autocomplete="off">
+
+
+                            <button
+                                class="send-button"
+                                onclick="sendMessage()">
+
+                                Send ➤
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <script src="tg.js"></script>
+
+</body>
+
+</html>
