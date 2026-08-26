@@ -1,30 +1,30 @@
-const TG_SPRITE_PATH = "assets/tg/";
+const TG_SPRITE_PATH = "assets/";
 
 const TG_EMOTIONS = {
 
     neutral: {
-        normal: "neutral.png",
-        blink: "neutral-blink.png"
+        normal: "tg-neutral.png",
+        blink: "tg-neutral-blink.png"
     },
 
     happy: {
-        normal: "happy.png",
-        blink: "happy-blink.png"
+        normal: "tg-happy.png",
+        blink: "tg-happy-blink.png"
     },
 
     confused: {
-        normal: "confused.png",
-        blink: "confused-blink.png"
+        normal: "tg-confused.png",
+        blink: "tg-confused-blink.png"
     },
 
     sad: {
-        normal: "sad.png",
-        blink: "sad-blink.png"
+        normal: "tg-sad.png",
+        blink: "tg-sad-blink.png"
     },
 
     angry: {
-        normal: "angry.png",
-        blink: "angry-blink.png"
+        normal: "tg-angry.png",
+        blink: "tg-angry-blink.png"
     }
 
 };
