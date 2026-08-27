@@ -1,14 +1,34 @@
 const TG_SPRITE_PATH = "assets/";
 
 const TG_SPRITES = {
-    neutral: "tg-neutral.png",
-    happy: "tg-happy.png",
-    sad: "tg-sad.png",
-    angry: "tg-angry.png",
-    silly: "tg-silly.png"
+    neutral: {
+        normal: "tg-neutral.png",
+        blink: "tg-neutral-blink.png"
+    },
+
+    happy: {
+        normal: "tg-happy.png",
+        blink: "tg-happy-blink.png"
+    },
+
+    sad: {
+        normal: "tg-sad.png",
+        blink: "tg-sad-blink.png"
+    },
+
+    angry: {
+        normal: "tg-angry.png",
+        blink: "tg-angry-blink.png"
+    },
+
+    silly: {
+        normal: "tg-silly.png",
+        blink: null
+    }
 };
 
 let currentEmotion = "neutral";
+let isBlinking = false;
 
 const tgSprite = document.getElementById("tgSprite");
 
@@ -22,8 +42,53 @@ function setTGEmotion(emotion) {
 
     tgSprite.src =
         TG_SPRITE_PATH +
-        TG_SPRITES[emotion];
+        TG_SPRITES[emotion].normal;
 }
+
+function blinkTG() {
+
+    if (isBlinking) {
+        return;
+    }
+
+    const sprite =
+        TG_SPRITES[currentEmotion];
+
+    if (!sprite || !sprite.blink) {
+        return;
+    }
+
+    isBlinking = true;
+
+    tgSprite.src =
+        TG_SPRITE_PATH +
+        sprite.blink;
+
+    setTimeout(function() {
+
+        tgSprite.src =
+            TG_SPRITE_PATH +
+            sprite.normal;
+
+        isBlinking = false;
+
+    }, 140);
+}
+
+function scheduleBlink() {
+
+    const delay =
+        Math.random() * 4000 + 2500;
+
+    setTimeout(function() {
+
+        blinkTG();
+        scheduleBlink();
+
+    }, delay);
+}
+
+scheduleBlink();
 
 function sendMessage() {
 
