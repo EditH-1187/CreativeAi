@@ -1,42 +1,20 @@
 const TG_SPRITE_PATH = "assets/";
 
-const TG_EMOTIONS = {
-
-    neutral: {
-        normal: "tg-neutral.png",
-        blink: "tg-neutral-blink.png"
-    },
-
-    happy: {
-        normal: "tg-happy.png",
-        blink: "tg-happy-blink.png"
-    },
-
-    confused: {
-        normal: "tg-confused.png",
-        blink: "tg-confused-blink.png"
-    },
-
-    sad: {
-        normal: "tg-sad.png",
-        blink: "tg-sad-blink.png"
-    },
-
-    angry: {
-        normal: "tg-angry.png",
-        blink: "tg-angry-blink.png"
-    }
-
+const TG_SPRITES = {
+    neutral: "tg-neutral.png",
+    happy: "tg-happy.png",
+    sad: "tg-sad.png",
+    angry: "tg-angry.png",
+    silly: "tg-silly.png"
 };
 
 let currentEmotion = "neutral";
 
-const tgSprite =
-    document.getElementById("tgSprite");
+const tgSprite = document.getElementById("tgSprite");
 
 function setTGEmotion(emotion) {
 
-    if (!TG_EMOTIONS[emotion]) {
+    if (!TG_SPRITES[emotion]) {
         emotion = "neutral";
     }
 
@@ -44,45 +22,8 @@ function setTGEmotion(emotion) {
 
     tgSprite.src =
         TG_SPRITE_PATH +
-        TG_EMOTIONS[emotion].normal;
+        TG_SPRITES[emotion];
 }
-
-function blinkTG() {
-
-    const emotion =
-        TG_EMOTIONS[currentEmotion];
-
-    if (!emotion) {
-        return;
-    }
-
-    tgSprite.src =
-        TG_SPRITE_PATH +
-        emotion.blink;
-
-    setTimeout(function() {
-
-        tgSprite.src =
-            TG_SPRITE_PATH +
-            emotion.normal;
-
-    }, 120);
-}
-
-function scheduleBlink() {
-
-    const delay =
-        Math.random() * 3500 + 2500;
-
-    setTimeout(function() {
-
-        blinkTG();
-        scheduleBlink();
-
-    }, delay);
-}
-
-scheduleBlink();
 
 function sendMessage() {
 
@@ -172,15 +113,12 @@ function determineEmotion(message) {
     if (
         text.includes("thank") ||
         text.includes("thanks") ||
-        text.includes("love") ||
         text.includes("great") ||
         text.includes("awesome") ||
         text.includes("good") ||
         text.includes("happy")
     ) {
-
         return "happy";
-
     }
 
     if (
@@ -190,9 +128,7 @@ function determineEmotion(message) {
         text.includes("bad") ||
         text.includes("upset")
     ) {
-
         return "sad";
-
     }
 
     if (
@@ -200,20 +136,16 @@ function determineEmotion(message) {
         text.includes("mad") ||
         text.includes("hate")
     ) {
-
         return "angry";
-
     }
 
     if (
-        text.includes("why") ||
-        text.includes("what") ||
-        text.includes("confused") ||
-        text.includes("how")
+        text.includes("funny") ||
+        text.includes("silly") ||
+        text.includes("haha") ||
+        text.includes("lol")
     ) {
-
-        return "confused";
-
+        return "silly";
     }
 
     return "neutral";
@@ -230,44 +162,34 @@ function getTGResponse(message) {
         text.includes("hey") ||
         text.includes("sup")
     ) {
-
         return "Hey! What's up? I'm TutorialGirl!";
-
     }
 
     if (
         text.includes("who are you") ||
         text.includes("what are you")
     ) {
-
         return "I'm TutorialGirl! You can call me TG. I'm here to help you with whatever creative thing you're working on!";
-
     }
 
     if (
         text.includes("creativeai") ||
         text.includes("creative ai")
     ) {
-
         return "CreativeAI is the company that made me! They're pretty cool, right?";
-
     }
 
     if (
         text.includes("help")
     ) {
-
         return "Of course! That's literally what I'm here for. Tell me what you're working on!";
-
     }
 
     if (
         text.includes("bye") ||
         text.includes("goodbye")
     ) {
-
         return "Bye! Come back whenever you need me!";
-
     }
 
     return "Hmm... that's interesting. Tell me more!";
