@@ -1,9 +1,3 @@
-
-/* =========================
-   CREATIVEAI
-   Main website stylesheet
-   ========================= */
-
 :root {
     --background: #fbfaff;
     --surface: #ffffff;
@@ -50,8 +44,6 @@ button:focus-visible {
     outline: 3px solid #a891ff;
     outline-offset: 4px;
 }
-
-/* NAVIGATION */
 
 .navbar {
     position: sticky;
